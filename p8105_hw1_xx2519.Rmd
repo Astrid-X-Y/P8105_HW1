@@ -28,7 +28,27 @@ ggsave("penguin_scatterplot.png", plot = penguin_plot)
 ```
 
 ## Problem 2
-```{r}
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
 
+random_sample = rnorm(10)
+logical_vector = random_sample > 0
+
+character_vector = c(
+  "a", "b", "c", "d", "e",
+  "f", "g", "h", "i", "j")
+
+factor_vector = factor(c(
+  "A", "A", "A",
+  "B", "B", "B",
+  "C", "C", "C", "C"))
+
+Q2_df = tibble(
+  random_sample,
+  logical_vector,
+  character_vector,
+  factor_vector)
+
+Q2_df
 ```
 
