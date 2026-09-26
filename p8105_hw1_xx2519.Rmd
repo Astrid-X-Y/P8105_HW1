@@ -1,0 +1,22 @@
+---
+title: "P8105 HW1"
+author: "Astrid Xu"
+date: "2026-09-26"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Problem 1
+```{r}
+
+```
+
+
+## Problem 2
+```{r}
+
+```
+
