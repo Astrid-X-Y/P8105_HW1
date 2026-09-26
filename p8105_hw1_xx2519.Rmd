@@ -52,3 +52,10 @@ Q2_df = tibble(
 Q2_df
 ```
 
+```{r, warning=FALSE, message=FALSE}
+mean(pull(Q2_df, random_sample))
+mean(pull(Q2_df, logical_vector))
+mean(pull(Q2_df, character_vector))
+mean(pull(Q2_df, factor_vector))
+```
+The mean can be calculated for the numeric variables (random_sample) and logical variables (logical_vector). Even the logical variables show in TRUE or FALSE, I think R treated FALSE as 0 and TRUE as 1 to calculate the mean. Mean can't be calculated for the character or factor variables.
