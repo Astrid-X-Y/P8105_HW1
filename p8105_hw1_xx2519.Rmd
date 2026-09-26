@@ -59,3 +59,10 @@ mean(pull(Q2_df, character_vector))
 mean(pull(Q2_df, factor_vector))
 ```
 The mean can be calculated for the numeric variables (random_sample) and logical variables (logical_vector). Even the logical variables show in TRUE or FALSE, I think R treated FALSE as 0 and TRUE as 1 to calculate the mean. Mean can't be calculated for the character or factor variables.
+
+```{r, results='hide'}
+as.numeric(pull(Q2_df, logical_vector))
+as.numeric(pull(Q2_df, character_vector))
+as.numeric(pull(Q2_df, factor_vector))
+```
+After conversion the logical variable is converted to 0s and 1s based on FALSE = 0 and TRUE = 1. The character variable contains unrelated values from "a" through "j", so they are recognized as plain text and cannot be converted to numerical values. So they are all displayed as NA. The factor variable is converted to 1, 2, and 3 according to the level order of A, B, and C. I think this happens because R recognizes A, B, and C as alphabetical values that have a default order or level, and therefore assigns them to 1, 2, and 3 in order, allowing them to be converted to numerical values and used to calculate a mean. Although the factor can be converted to numeric values and a mean can then technically be calculated, this mean does not make sense to me. Because there is no meaningful interpretation for 1, 2, and 3 only as the internal codes for the factor levels.
